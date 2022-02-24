@@ -4,22 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Jogo da Forca</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Leonardo FG - Challenge Oracle ONE Semana 03 e 04: Crie seu próprio jogo da forca com Javascript</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.alura.ico">
   </head>
   <body>
+    <img class="alogo" src="img/alura-logo.svg">
     <div style="text-align:center; margin: 50px 0px;">
       <h1 class="titulo">Jogo da Forca</h1>
-      <button class="btn" id="iniciar-jogo">INICIAR JOGO</button>
+      <button class="btn" id="iniciar-jogo">COMEÇAR A JOGAR</button>
     </div>
     <div style="text-align:center">
       <input class="text-input" type="text" id="input-nova-palavra" placeholder="Escreva uma nova palavra">
-      <button class="btn" id="nova-palavra">ADICIONAR PALAVRA</button> 
+      <button class="btn" id="nova-palavra">ADICIONAR NOVA PALAVRA</button> 
     </div>
     <div style="text-align:center;">
       <canvas id="forca" height="800px" width="1200px"></canvas>
     </div>
-    <script type="text/javascript" src="canvas.js"></script>
-    <script type="text/javascript" src="forca.js"></script>
+    <section class="rodape">
+      <br>
+      <a href="https://github.com/LeonardoFG" style="margin-right:40px;">
+        <img src="img/github-mark.svg" alt="https://github.com/LeonardoFG" style="width:16px;height:16px;">
+        https://github.com/LeonardoFG
+        
+      </a>
+      <a href="https://www.linkedin.com/in/leonardofg/" style="margin-right:40px;">
+        <img src="img/linkedin.svg" alt="https://www.linkedin.com/in/leonardofg/" style="width:16px;height:16px;">
+        https://www.linkedin.com/in/leonardofg/
+      </a>
+      
+    </section>
+    <script type="text/javascript" src="js/canvas.js"></script>
+    <script type="text/javascript" src="js/forca.js"></script>
   </body>
 </html>
