@@ -2,6 +2,16 @@
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
+  color: #0A3871;
+}
+
+.alogo {
+  /* Vector */
+  position: absolute;
+  left: 36.67%;
+  right: 37.43%;
+  top: 0%;
+  bottom: 0%;
 }
 
 .titulo {
@@ -15,10 +25,10 @@
   /* Button */
   /* Auto layout */
   display: flex;
-  flex-direction: row;
+  /*flex-direction: row;*/
   align-items: center;
   padding: 24px;
-  position: absolute;
+  position: relative;
   width: 317px;
   height: 105px;
   left: 562px; 
@@ -90,12 +100,26 @@
 
 
 .text-input {
-  border-radius: 0.5em;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  display: block;
-  padding: 0.5em;
-  width: 30%;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  /* Digite uma palavra ou frase */
+  position: absolute;
+  width: 413px;
+  height: 48px;
+  left: 376px;
+  top: 256px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 150%;
+  /* identical to box height, or 48px */
+  /* Dark blue/dark-blue-300 */
+  color: #0A3871;
+}
+
+.rodape {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
