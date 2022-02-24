@@ -1,3 +1,8 @@
+*{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+}
 
 .titulo {
   padding: 15px;
@@ -7,15 +12,82 @@
 }
 
 .btn {
-  border: 0;
-  color: white;
-  font-weight: bold;
-  background-color: blue;
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 0.5em;
+  /* Button */
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 24px;
+  position: absolute;
+  width: 317px;
+  height: 105px;
+  left: 562px; 
+  top: 394px;
+  border-radius: 24px;
 }
+
+#iniciar-jogo {
+  /* Button */
+  position: static;
+  width: 269px;
+  height: 57px;
+  left: 24px;
+  top: 24px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  /* White */
+  color: #FFFFFF;
+
+  /* Dark blue/dark-blue-300 */
+  background: #0A3871;
+
+
+  /* Inside auto layout 
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  margin: 0px 8px;*/
+}
+
+#nova-palavra {
+  /* Button */
+  position: static;
+  width: 269px;
+  height: 57px;
+  left: 24px;
+  top: 24px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  /* Dark blue/dark-blue-300 */
+  color: #0A3871;
+  background: #E5E5E5;
+
+  /* Inside auto layout 
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  margin: 0px 8px;*/
+}
+
+
 
 .text-input {
   border-radius: 0.5em;
