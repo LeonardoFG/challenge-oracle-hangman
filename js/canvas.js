@@ -1,6 +1,6 @@
 
 var tela = document.querySelector('canvas');
-console.log(tela);
+console.log('tela:', tela);
 var pincel = tela.getContext('2d');
 
 function desenhaTela() {
