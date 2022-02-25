@@ -1,5 +1,6 @@
 
 let palavras = ['ALURA', 'ORACLE', 'JAVA', 'NETFLIX', 'CAMERA', 'CACHORRO', 'PASSARO', 'COMIDA', 'BEBIDA' ]
+var vidas = 6;
 
 
 // botão inicia jogo
@@ -20,6 +21,20 @@ function iniciaJogo() {
         //sorteio.indexOf(teclaP);
         console.log(sorteio.indexOf(teclaP));
         console.log(teclaP);
+
+        if (sorteio.indexOf(teclaP) >= 0){
+            console.log('acertou a letra');
+        } else {
+            vidas = vidas - 1;
+            console.log('vidas:', vidas);
+            }
+        }
+
+        if (vidas <= 0){
+            alert('você morreu');
+        }
+
+
 
         /*se sorteio[posição do for] for igual a teclaP (palavra que estou procurando)
         então coloco na variavel palavra[posicao do for] o conteudo de teclaP
