@@ -1,8 +1,8 @@
 
 let palavras = ['ALURA', 'ORACLE', 'JAVA', 'NETFLIX', 'CAMERA', 'CACHORRO', 'PASSARO', 'COMIDA', 'BEBIDA' ];
 var vidas = 6;
-let chuteCerto = [''];
-let chuteErro = [''];
+let chuteCerto = [];
+let chuteErro = [];
 let sorteio;
 
 
@@ -22,39 +22,41 @@ function iniciaJogo(event) {
         let teclaP = event.key;
         teclaP = teclaP.toUpperCase();
         //sorteio.indexOf(teclaP);
-        console.log('posição na palavra sorteada: ',sorteio.indexOf(teclaP, 0));
+        console.log('posição na palavra sorteada: ',sorteio.indexOf(teclaP));
         console.log('Letra digitada: ',teclaP);
-        console.log('posição tecla digitada chuteCerto: ',teclaP.indexOf(chuteCerto, 0));
-        console.log('posição tecla digitada chuteErro: ',teclaP.indexOf(chuteErro, 0));
+        console.log('posição tecla digitada chuteCerto: ',teclaP.indexOf(chuteCerto));
+        console.log('posição tecla digitada chuteErro: ',teclaP.indexOf(chuteErro));
 
 
         /*if (teclaP.indexOf(chuteCerto) >= 0 && teclaP.indexOf(chuteErro) >= 0){
             console.log('Tecla esta nos arrays chuteCerto & chuteErro');
         } else {*/
             if (vidas != 0){
-                if (sorteio.indexOf(teclaP, 0) >= 0){
-                    console.log('posição tecla digitada chuteCerto: ',teclaP.indexOf(chuteCerto, 0));
-                    //let pos = (sorteio.indexOf(teclaP));
+                let teste = sorteio.indexOf(teclaP);
+                console.log('acertou a letra:', teclaP);
+                console.log(teste);
+                if (sorteio.indexOf(teclaP) >= 0){
+                    console.log('posição tecla digitada chuteCerto: ',chuteCerto.indexOf(teclaP));
+                    let pos = (sorteio.indexOf(teclaP));
                     //console.log(pos);
-                    console.log('acertou a letra:', teclaP);
-                    
-                    if (teclaP.indexOf(chuteCerto, 0) != 0){
+                    if (chuteCerto.indexOf(teclaP) >= 0){
                         console.log('Você já ACERTOU essa Letra!');
                     } else {
                         chuteCerto.push(teclaP);
                         console.log('Letras Acertadas: ', chuteCerto);
+                        for (let i = 0; i < sorteio.length; i = i++){
+                            sorteio.indexOf(teclaP, i);
+                        }
                     }
-
                 } else {
-                    if (teclaP.indexOf(chuteErro, 0) != 0){
+                    if (chuteErro.indexOf(teclaP) >= 0){
                         console.log('Você já ERROU essa Letra!')
                     } else {
-                        console.log('posição tecla digitada chuteErro: ',teclaP.indexOf(chuteErro, 0));
+                        console.log('posição tecla digitada chuteErro: ',teclaP.indexOf(chuteErro));
                         vidas = vidas - 1;
                         console.log('vidas:', vidas);
                         chuteErro.push(teclaP);
                         console.log('Letras erradas: ', chuteErro);
-
                     }
                 }
             } else {
