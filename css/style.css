@@ -123,3 +123,7 @@
   text-align: center;
   justify-content: center;
 }
+
+#nova-palavra {
+  display: none;
+}
