@@ -13,21 +13,24 @@ function iniciaJogo() {
     console.log(sorteio);
     console.log(sorteio.length);
     desenhaTela();
-    const el = document.getElementById("myInputID");
-    el.addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            // Enter key was hit
-        }
-    });
 
+    document.addEventListener("keypress", function(event) {
+        let teclaP = event.key;
+        teclaP = teclaP.toUpperCase();
+        //sorteio.indexOf(teclaP);
+        console.log(sorteio.indexOf(teclaP));
+        console.log(teclaP);
+
+        /*se sorteio[posição do for] for igual a teclaP (palavra que estou procurando)
+        então coloco na variavel palavra[posicao do for] o conteudo de teclaP
+        quando a variavel -> palavra for igual a variavel -> sorteio, a palavra foi descoberta
+        */
+
+
+    });
     
-    /*$.get('palavras.txt',{},function(content){
-        let lines=content.split('\n');
-  
-        console.log(`"palavras.txt" contains ${lines.length} lines`)
-        console.log(`First line : ${lines[0]}`)
-  
-    });*/
+
+
 }
 
 
