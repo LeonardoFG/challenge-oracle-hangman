@@ -4,6 +4,9 @@ var vidas = 6;
 let chuteCerto = [];
 let chuteErro = [];
 let sorteio;
+let pos =[];
+let posT =[];
+let letraDes;
 
 
 // botão inicia jogo
@@ -21,53 +24,57 @@ function iniciaJogo(event) {
     document.addEventListener("keypress", function(event) {
         let teclaP = event.key;
         teclaP = teclaP.toUpperCase();
-        //sorteio.indexOf(teclaP);
+        letraDes = teclaP;
+        /*
         console.log('posição na palavra sorteada: ',sorteio.indexOf(teclaP));
         console.log('Letra digitada: ',teclaP);
         console.log('posição tecla digitada chuteCerto: ',teclaP.indexOf(chuteCerto));
         console.log('posição tecla digitada chuteErro: ',teclaP.indexOf(chuteErro));
-
-
-        /*if (teclaP.indexOf(chuteCerto) >= 0 && teclaP.indexOf(chuteErro) >= 0){
-            console.log('Tecla esta nos arrays chuteCerto & chuteErro');
-        } else {*/
-            if (vidas != 0){
-                let teste = sorteio.indexOf(teclaP);
-                console.log('acertou a letra:', teclaP);
-                console.log(teste);
-                if (sorteio.indexOf(teclaP) >= 0){
-                    console.log('posição tecla digitada chuteCerto: ',chuteCerto.indexOf(teclaP));
-                    let pos = (sorteio.indexOf(teclaP));
-                    //console.log(pos);
-                    if (chuteCerto.indexOf(teclaP) >= 0){
-                        console.log('Você já ACERTOU essa Letra!');
-                    } else {
-                        chuteCerto.push(teclaP);
-                        console.log('Letras Acertadas: ', chuteCerto);
-                        for (let i = 0; i < sorteio.length; i = i++){
-                            sorteio.indexOf(teclaP, i);
-                        }
-                    }
-                } else {
-                    if (chuteErro.indexOf(teclaP) >= 0){
-                        console.log('Você já ERROU essa Letra!')
-                    } else {
-                        console.log('posição tecla digitada chuteErro: ',teclaP.indexOf(chuteErro));
-                        vidas = vidas - 1;
-                        console.log('vidas:', vidas);
-                        chuteErro.push(teclaP);
-                        console.log('Letras erradas: ', chuteErro);
-                    }
-                }
+        */
+    if (vidas != 0){
+        let teste = sorteio.indexOf(teclaP);
+        console.log('acertou a letra:', teclaP);
+        console.log('primeira posição letra acertada: ', teste);
+        if (sorteio.indexOf(teclaP) >= 0){
+            console.log('posição tecla digitada chuteCerto: ',chuteCerto.indexOf(teclaP));
+            if (chuteCerto.indexOf(teclaP) >= 0){
+                console.log('Você já ACERTOU essa Letra!');
             } else {
-                alert('você morreu');
+                chuteCerto.push(teclaP);
+                console.log('Letras Acertadas: ', chuteCerto);
+                for (let i = 0; i < sorteio.length; i++){
+                    var posi = sorteio.indexOf(teclaP, i);
+                    if (posi >= 0 ){
+                        i = posi;
+                        pos.push(posi);
+                        posT.push(posi);
+                    }
+                    console.log(sorteio[i]);
+                    console.log(posi);
+                    console.log(pos);
+                    console.log(posT);
+                }
+                desenhaLetraPos(letraDes);
+                pos = [];
+                if (posT.length == sorteio.length){
+                    alert('Você Ganhou !!!')
+                }
             }
-        //}
+        } else {
+            if (chuteErro.indexOf(teclaP) >= 0){
+                console.log('Você já ERROU essa Letra!')
+            } else {
+                console.log('posição tecla digitada chuteErro: ',teclaP.indexOf(chuteErro));
+                vidas = vidas - 1;
+                console.log('vidas:', vidas);
+                chuteErro.push(teclaP);
+                console.log('Letras erradas: ', chuteErro);
+            }
+        }
+    } else {
+        alert('Você morreu !');
+    }
        
-
-        
-
-
         /*se sorteio[posição do for] for igual a teclaP (palavra que estou procurando)
         então coloco na variavel palavra[posicao do for] o conteudo de teclaP
         quando a variavel -> palavra for igual a variavel -> sorteio, a palavra foi descoberta
