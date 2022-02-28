@@ -44,7 +44,7 @@ function cabeca() {
     pincel.arc(xBoneco, yBoneco, 31.5, 0, Math.PI * 2, true); // Outer circle
     pincel.stroke();
 }
-cabeca();
+
 retForca();
 
 function corpo(){
@@ -53,7 +53,7 @@ function corpo(){
     pincel.lineTo((xBoneco +0.22), (yBoneco + 166));
     pincel.stroke();
 }
-corpo();
+
 
 function bracoEsquerdo(){
     pincel.beginPath();
@@ -61,7 +61,7 @@ function bracoEsquerdo(){
     pincel.lineTo((xBoneco - 34.78), (yBoneco + 96.5));
     pincel.stroke();
 }
-bracoEsquerdo();
+
 
 function bracoDireito(){
     pincel.beginPath();
@@ -69,20 +69,20 @@ function bracoDireito(){
     pincel.lineTo((xBoneco + 34.78), (yBoneco + 96.5));
     pincel.stroke();
 }
-bracoDireito();
 
-function pernaEsquerdo(){
+
+function pernaEsquerda(){
     pincel.beginPath();
     pincel.moveTo((xBoneco +0.22), (yBoneco + 166));
     pincel.lineTo((xBoneco - 34.78), (yBoneco + 231));
     pincel.stroke();
 }
-pernaEsquerdo();
 
-function pernaDireito(){
+
+function pernaDireita(){
     pincel.beginPath();
     pincel.moveTo((xBoneco +0.22), (yBoneco + 166));
     pincel.lineTo((xBoneco + 34.78), (yBoneco + 231));
     pincel.stroke();
 }
-pernaDireito();
+
