@@ -82,7 +82,24 @@ function iniciaJogo(event) {
 
 
     });
-    
+    if (vidas == 5){
+        cabeca();
+    }
+    if (vidas == 4){
+        corpo();
+    }
+    if (vidas == 3){
+        bracoEsquerdo();
+    }
+    if (vidas == 2){
+        bracoDireito();
+    }
+    if (vidas == 1){
+        pernaEsquerda();
+    }
+    if (vidas == 0){
+        pernaDireita();
+    }
 
 
 }
