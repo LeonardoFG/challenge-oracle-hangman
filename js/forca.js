@@ -19,7 +19,9 @@ function iniciaJogo(event) {
     sorteio = palavras[Math.floor(Math.random()*palavras.length)];
     console.log('Palavra sorteada: ', sorteio);
     console.log('Número de caracteres na palavra: ', sorteio.length);
-    //desenhaTela();
+    nTracos = sorteio.length;
+    forca();
+    desenhaTracos(nTracos);
 
     document.addEventListener("keypress", function(event) {
         let teclaP = event.key;
