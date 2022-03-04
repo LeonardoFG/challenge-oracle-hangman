@@ -45,7 +45,7 @@ function cabeca() {
     pincel.stroke();
 }
 
-retForca();
+//retForca();
 
 function corpo(){
     pincel.beginPath();
@@ -86,3 +86,23 @@ function pernaDireita(){
     pincel.stroke();
 }
 
+cabeca();
+corpo();
+bracoDireito();
+bracoEsquerdo();
+pernaDireita();
+pernaEsquerda();
+
+function forca(){
+    pincel.beginPath();
+    pincel.moveTo((xBoneco +0.22), (yBoneco -31.5));
+    pincel.lineTo((xBoneco +0.22), (yBoneco - 70));
+    pincel.lineTo(170, (yBoneco - 70));
+    pincel.lineTo(170, 360);
+    pincel.moveTo(103, 360);
+    pincel.lineTo(400, 360);
+    //pincel.strokeRect(103, 1, 294, 360);
+    pincel.stroke();
+}
+
+forca();
