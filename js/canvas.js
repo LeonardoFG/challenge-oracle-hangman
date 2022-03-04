@@ -18,9 +18,15 @@ function desenhaTela() {
 }
 
 function desenhaLetraPos(letraDes, posi){
+    pincel.fillStyle = 'black';
+    pincel.font = '30px currier';
+    pincel.fillText(letraDes, ((posi + 1)*tamanhoLetra)+espaco, yLetra-5);
+}
+
+function desenhaLetraErro(letraDes, posiE){
     pincel.fillStyle = 'red';
-    pincel.font = '30px serif';
-    pincel.fillText(letraDes, ((posi + 1)*tamanhoLetra)+espaco, 425);
+    pincel.font = '30px currier';
+    pincel.fillText(letraDes, ((posiE + 1)*tamanhoLetra)+espaco, yLetra+70);
 }
 
 function retForca(){
