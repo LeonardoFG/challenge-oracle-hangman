@@ -48,6 +48,7 @@ function iniciaJogo(event) {
                     var posi = sorteio.indexOf(teclaP, i);
                     if (posi >= 0 ){
                         i = posi;
+                        desenhaLetraPos(letraDes, posi);
                         pos.push(posi);
                         posT.push(posi);
                     }
@@ -56,7 +57,7 @@ function iniciaJogo(event) {
                     console.log(pos);
                     console.log(posT);
                 }
-                desenhaLetraPos(letraDes);
+                
                 pos = [];
                 if (posT.length == sorteio.length){
                     alert('Você Ganhou !!!')
