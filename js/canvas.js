@@ -6,6 +6,11 @@ var pincel = tela.getContext('2d');
 var xBoneco = 310; 
 var yBoneco = 70;
 
+var tamanhoLetra = 30;
+var espaco = 10;
+var xLetra = 50;
+var yLetra = 430;
+
 function desenhaTela() {
     //retângulo verde
     pincel.fillStyle = 'grey';
@@ -14,11 +19,8 @@ function desenhaTela() {
 
 function desenhaLetraPos(letraDes){
     pincel.fillStyle = 'red';
-    //pincel.fillRect(0, 0, 80, 80);
-
-    //var ctx = document.getElementById('canvas').getContext('2d');
-    pincel.font = '48px serif';
-    pincel.fillText(letraDes, 10, 50);
+    pincel.font = '30px serif';
+    pincel.fillText(letraDes, 100, 400);
 }
 
 function retForca(){
@@ -29,25 +31,27 @@ function retForca(){
 function winCabeca() {
     pincel.fillStyle = 'black';
     pincel.beginPath();
-    pincel.arc(xBoneco, yBoneco, 31.5, 0, Math.PI * 2, true); // Outer circle
+    pincel.arc(xBoneco, yBoneco, 31.5, 0, Math.PI * 2, true); // cabeça
     pincel.moveTo((xBoneco + 17.55), yBoneco);
-    pincel.arc(xBoneco, yBoneco, 17, 0, Math.PI, false);  // Mouth (clockwise)
+    pincel.arc(xBoneco, yBoneco, 17, 0, Math.PI, false);  // boca
     pincel.moveTo((xBoneco - 7.22), (yBoneco - 13));
-    pincel.arc((xBoneco - 9.45), (yBoneco - 13), 3, 0, Math.PI * 2, true);  // Left eye
+    pincel.arc((xBoneco - 9.45), (yBoneco - 13), 3, 0, Math.PI * 2, true);  // olho esquerdo
     pincel.moveTo((xBoneco + 13.88), (yBoneco - 13));
-    pincel.arc((xBoneco + 11.22), (yBoneco - 13), 3, 0, Math.PI * 2, true);  // Right eye*/
+    pincel.arc((xBoneco + 11.22), (yBoneco - 13), 3, 0, Math.PI * 2, true);  // olho direito
     pincel.stroke();
 }
 
 function cabeca() {
+    pincel.fillStyle = 'black';
     pincel.beginPath();
-    pincel.arc(xBoneco, yBoneco, 31.5, 0, Math.PI * 2, true); // Outer circle
+    pincel.arc(xBoneco, yBoneco, 31.5, 0, Math.PI * 2, true); // cabeça
     pincel.stroke();
 }
 
 //retForca();
 
 function corpo(){
+    pincel.fillStyle = 'black';
     pincel.beginPath();
     pincel.moveTo((xBoneco +0.22), (yBoneco +31.5));
     pincel.lineTo((xBoneco +0.22), (yBoneco + 166));
@@ -56,6 +60,7 @@ function corpo(){
 
 
 function bracoEsquerdo(){
+    pincel.fillStyle = 'black';
     pincel.beginPath();
     pincel.moveTo((xBoneco +0.22), (yBoneco +31.5));
     pincel.lineTo((xBoneco - 34.78), (yBoneco + 96.5));
@@ -64,6 +69,7 @@ function bracoEsquerdo(){
 
 
 function bracoDireito(){
+    pincel.fillStyle = 'black';
     pincel.beginPath();
     pincel.moveTo((xBoneco +0.22), (yBoneco +31.5));
     pincel.lineTo((xBoneco + 34.78), (yBoneco + 96.5));
@@ -72,6 +78,7 @@ function bracoDireito(){
 
 
 function pernaEsquerda(){
+    pincel.fillStyle = 'black';
     pincel.beginPath();
     pincel.moveTo((xBoneco +0.22), (yBoneco + 166));
     pincel.lineTo((xBoneco - 34.78), (yBoneco + 231));
@@ -80,6 +87,7 @@ function pernaEsquerda(){
 
 
 function pernaDireita(){
+    pincel.fillStyle = 'black';
     pincel.beginPath();
     pincel.moveTo((xBoneco +0.22), (yBoneco + 166));
     pincel.lineTo((xBoneco + 34.78), (yBoneco + 231));
@@ -93,7 +101,8 @@ function pernaDireita(){
 //pernaDireita();
 //pernaEsquerda();
 
-function forca(){
+function forca() {
+    pincel.fillStyle = 'black';
     pincel.beginPath();
     pincel.moveTo((xBoneco +0.22), (yBoneco -31.5));
     pincel.lineTo((xBoneco +0.22), (yBoneco - 70));
@@ -101,8 +110,23 @@ function forca(){
     pincel.lineTo(170, 360);
     pincel.moveTo(103, 360);
     pincel.lineTo(400, 360);
-    //pincel.strokeRect(103, 1, 294, 360);
     pincel.stroke();
 }
 
-forca();
+//forca();
+
+function desenhaTracos(nTracos){
+    pincel.fillStyle = 'black';
+    pincel.beginPath();
+    console.log('desenhaTracos');
+    for (let i = 1; i < (nTracos + 2); i++) {
+        posLetra = i * (tamanhoLetra);
+        pincel.lineTo(posLetra, yLetra);
+        posLetra = posLetra + espaco;
+        pincel.moveTo(posLetra, yLetra);
+        pincel.stroke();
+        console.log(posLetra);
+        console.log(i);
+    }
+
+}
