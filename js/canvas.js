@@ -17,10 +17,10 @@ function desenhaTela() {
     pincel.fillRect(0, 0, 800, 1200);
 }
 
-function desenhaLetraPos(letraDes){
+function desenhaLetraPos(letraDes, posi){
     pincel.fillStyle = 'red';
     pincel.font = '30px serif';
-    pincel.fillText(letraDes, 100, 400);
+    pincel.fillText(letraDes, ((posi + 1)*tamanhoLetra)+espaco, 425);
 }
 
 function retForca(){
