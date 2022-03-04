@@ -86,12 +86,12 @@ function pernaDireita(){
     pincel.stroke();
 }
 
-cabeca();
-corpo();
-bracoDireito();
-bracoEsquerdo();
-pernaDireita();
-pernaEsquerda();
+//cabeca();
+//corpo();
+//bracoDireito();
+//bracoEsquerdo();
+//pernaDireita();
+//pernaEsquerda();
 
 function forca(){
     pincel.beginPath();
