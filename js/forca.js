@@ -19,7 +19,7 @@ function iniciaJogo(event) {
     sorteio = palavras[Math.floor(Math.random()*palavras.length)];
     console.log('Palavra sorteada: ', sorteio);
     console.log('Número de caracteres na palavra: ', sorteio.length);
-    desenhaTela();
+    //desenhaTela();
 
     document.addEventListener("keypress", function(event) {
         let teclaP = event.key;
@@ -71,17 +71,7 @@ function iniciaJogo(event) {
                 console.log('Letras erradas: ', chuteErro);
             }
         }
-    } else {
-        alert('Você morreu !');
-    }
-       
-        /*se sorteio[posição do for] for igual a teclaP (palavra que estou procurando)
-        então coloco na variavel palavra[posicao do for] o conteudo de teclaP
-        quando a variavel -> palavra for igual a variavel -> sorteio, a palavra foi descoberta
-        */
-
-
-    });
+    } 
     if (vidas == 5){
         cabeca();
     }
@@ -99,7 +89,17 @@ function iniciaJogo(event) {
     }
     if (vidas == 0){
         pernaDireita();
+        alert('Você morreu !');
     }
+       
+        /*se sorteio[posição do for] for igual a teclaP (palavra que estou procurando)
+        então coloco na variavel palavra[posicao do for] o conteudo de teclaP
+        quando a variavel -> palavra for igual a variavel -> sorteio, a palavra foi descoberta
+        */
+
+
+    });
+
 
 
 }
