@@ -124,15 +124,15 @@ function forca() {
 function desenhaTracos(nTracos){
     pincel.fillStyle = 'black';
     pincel.beginPath();
-    console.log('desenhaTracos');
+    //console.log('desenhaTracos');
     for (let i = 1; i < (nTracos + 2); i++) {
         posLetra = i * (tamanhoLetra);
         pincel.lineTo(posLetra, yLetra);
         posLetra = posLetra + espaco;
         pincel.moveTo(posLetra, yLetra);
         pincel.stroke();
-        console.log(posLetra);
-        console.log(i);
+        //console.log(posLetra);
+        //console.log(i);
     }
 
 }
