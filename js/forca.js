@@ -7,6 +7,7 @@ let sorteio;
 let pos =[];
 let posT =[];
 let letraDes;
+let ganhou;
 
 
 // botão inicia jogo
@@ -41,6 +42,7 @@ function iniciaJogo(event) {
                 console.log('posição tecla digitada chuteCerto: ',chuteCerto.indexOf(teclaP));
                 if (chuteCerto.indexOf(teclaP) >= 0){
                     console.log('Você já ACERTOU essa Letra!');
+                    //alert('Você já ACERTOU essa Letra!');
                 } else {
                     chuteCerto.push(teclaP);
                     console.log('Letras Acertadas: ', chuteCerto);
@@ -59,13 +61,15 @@ function iniciaJogo(event) {
                     }
 
                     pos = [];
-                    if (posT.length == sorteio.length){
-                        alert('Você Ganhou !!!');
+                    if (posT.length >= sorteio.length){
+                        console.log('Você Ganhou !!!')
+                        //alert('Você Ganhou !!!');
                     }
                 }
             } else {
                 if (chuteErro.indexOf(teclaP) >= 0){
-                    console.log('Você já ERROU essa Letra!')
+                    console.log('Você já ERROU essa Letra!');
+                    //alert('Você já ERROU essa Letra!');
                 } else {
                     console.log('posição tecla digitada chuteErro: ',teclaP.indexOf(chuteErro));
                     vidas = vidas - 1;
@@ -94,7 +98,8 @@ function iniciaJogo(event) {
         }
         if (vidas == 0){
             pernaDireita();
-            alert('Você morreu !');
+            //alert('Você morreu !');
+            console.log('Você morreu !');
         }
     });
 }
