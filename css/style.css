@@ -68,7 +68,7 @@
   margin: 0px 8px;*/
 }
 
-#nova-palavra {
+#nova-palavra-btn {
   /* Button */
   position: static;
   width: 269px;
@@ -124,6 +124,6 @@
   justify-content: center;
 }
 
-#nova-palavra {
+/*#nova-palavra {
   display: none;
-}
+}*/
