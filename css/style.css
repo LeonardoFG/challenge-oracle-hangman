@@ -12,8 +12,9 @@
 }
 
 .titulo {
-  margin: 60px auto;
-
+  display: block;
+  margin: 60px auto 5px;
+  padding: 0 15% 0;
 }
 
 .btn {
@@ -24,7 +25,7 @@
   width: 317px;
   height: 105px;
   border-radius: 24px;
-  margin: 10px;
+  margin: 15px auto 0px;
 }
 
 #iniciar-jogo {
@@ -75,15 +76,14 @@
 }
 
 #nova-palavra {
-  display: inline-block;
   vertical-align: top;
-  text-align: center;
   width: 30%;
+  margin: auto;
 }
 
 #canvas-forca {
-    /*margin: auto;*/
-    display: flex;
+  display: flex;
+  margin: auto;
 }
 
 .text-input {
@@ -97,13 +97,14 @@
 }
 
 .rodape {
-  display: none;
-  align-items: center;
+  display: inline;
+  /*align-items: center;
   text-align: center;
-  justify-content: center;
+  justify-content: center;*/
   width:16px;
   height:16px;
-  margin: 0 20px;
+  margin: 15px auto 0px;
+  padding: 0 20px;
 }
 
 #logo-in {
