@@ -9,7 +9,7 @@ var yBoneco = 70;
 
 var tamanhoLetra = 30;
 var espaco = 10;
-var xLetra = 50;
+var xLetra = 200;
 var yLetra = 430;
 
 function desenhaTela() {
@@ -127,7 +127,7 @@ function desenhaTracos(nTracos){
     pincel.beginPath();
     //console.log('desenhaTracos');
     for (let i = 1; i < (nTracos + 2); i++) {
-        posLetra = i * (tamanhoLetra);
+        posLetra = (i * tamanhoLetra);
         pincel.lineTo(posLetra, yLetra);
         posLetra = posLetra + espaco;
         pincel.moveTo(posLetra, yLetra);
