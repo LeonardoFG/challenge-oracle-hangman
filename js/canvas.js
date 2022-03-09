@@ -27,7 +27,7 @@ function desenhaLetraPos(letraDes, posi){
 function desenhaLetraErro(letraDes, posiE){
     pincel.fillStyle = 'red';
     pincel.font = '30px currier';
-    pincel.fillText(letraDes, ((posiE + 1)*tamanhoLetra)+espaco, yLetra+70);
+    pincel.fillText(letraDes, ((posiE + 1)*tamanhoLetra)+espaco, yLetra+60);
 }
 
 function retForca(){
