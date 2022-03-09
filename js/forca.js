@@ -22,6 +22,7 @@ function iniciaJogo(event) {
     //console.log('Número de caracteres na palavra: ', sorteio.length);
     nTracos = sorteio.length;
     estamosEmJogo = true;
+    desenhaTela();
     forca();
     desenhaTracos(nTracos);
 

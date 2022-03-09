@@ -6,61 +6,45 @@
 }
 
 .alogo {
-  /* Vector */
   position: absolute;
-  left: 36.67%;
-  right: 37.43%;
-  top: 0%;
-  bottom: 0%;
+  left: 5%;
+  top: 1%;
 }
 
 .titulo {
-  padding: 15px;
-  width: 30vw;
-  margin: auto;
+  margin: 60px auto;
 
 }
 
 .btn {
-  /* Button */
-  /* Auto layout */
-  display: flex;
-  /*flex-direction: row;*/
+  display: inline;
+  flex-direction: row;
   align-items: center;
-  padding: 24px;
   position: relative;
   width: 317px;
   height: 105px;
-  left: 562px; 
-  top: 394px;
   border-radius: 24px;
+  margin: 10px;
 }
 
 #iniciar-jogo {
-  /* Button */
-  position: static;
+  position: relative;
   width: 269px;
   height: 57px;
-  left: 24px;
-  top: 24px;
+  /*left: 100px;
+  top: 580px;*/
 
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-  display: flex;
+  /*display: flex;*/
   align-items: center;
   text-align: center;
   justify-content: center;
-
-  /* White */
   color: #FFFFFF;
-
-  /* Dark blue/dark-blue-300 */
   background: #0A3871;
-
-
   /* Inside auto layout 
   flex: none;
   order: 0;
@@ -69,27 +53,20 @@
 }
 
 #nova-palavra-btn {
-  /* Button */
-  position: static;
+  /*position: relative;*/
   width: 269px;
   height: 57px;
-  left: 24px;
-  top: 24px;
-
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-  display: flex;
+  /*display: flex;*/
   align-items: center;
   text-align: center;
   justify-content: center;
-
-  /* Dark blue/dark-blue-300 */
   color: #0A3871;
   background: #E5E5E5;
-
   /* Inside auto layout 
   flex: none;
   order: 0;
@@ -97,33 +74,39 @@
   margin: 0px 8px;*/
 }
 
+#nova-palavra {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  width: 30%;
+}
 
+#canvas-forca {
+    /*margin: auto;*/
+    display: flex;
+}
 
 .text-input {
-  /* Digite uma palavra ou frase */
-  position: absolute;
-  width: 413px;
-  height: 48px;
-  left: 376px;
-  top: 256px;
-
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 22px;
   line-height: 150%;
   /* identical to box height, or 48px */
-  /* Dark blue/dark-blue-300 */
   color: #0A3871;
 }
 
 .rodape {
-  display: flex;
+  display: none;
   align-items: center;
   text-align: center;
   justify-content: center;
+  width:16px;
+  height:16px;
+  margin: 0 20px;
 }
 
-/*#nova-palavra {
-  display: none;
-}*/
+#logo-in {
+  width:16px;
+  height:16px;
+}

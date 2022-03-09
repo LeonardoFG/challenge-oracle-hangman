@@ -3,6 +3,7 @@ var tela = document.querySelector('canvas');
 console.log('tela:', tela);
 var pincel = tela.getContext('2d');
 
+
 var xBoneco = 310; 
 var yBoneco = 70;
 
@@ -13,8 +14,8 @@ var yLetra = 430;
 
 function desenhaTela() {
     //retângulo verde
-    pincel.fillStyle = 'grey';
-    pincel.fillRect(0, 0, 800, 1200);
+    pincel.fillStyle = 'white';
+    pincel.fillRect(0, 0, 400, 600);
 }
 
 function desenhaLetraPos(letraDes, posi){
