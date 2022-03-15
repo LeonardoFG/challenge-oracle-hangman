@@ -4,7 +4,7 @@ console.log('tela:', tela);
 var pincel = tela.getContext('2d');
 
 
-var xBoneco = 310; 
+var xBoneco = 270; 
 var yBoneco = 70;
 
 var tamanhoLetra = 30;
@@ -32,7 +32,7 @@ function desenhaLetraErro(letraDes, posiE){
 
 function retForca(){
     pincel.fillStyle = 'black';
-    pincel.strokeRect(103, 1, 294, 360);
+    pincel.strokeRect(73, 1, 264, 360);
 }
 
 function winCabeca() {
@@ -113,10 +113,10 @@ function forca() {
     pincel.beginPath();
     pincel.moveTo((xBoneco +0.22), (yBoneco -31.5));
     pincel.lineTo((xBoneco +0.22), (yBoneco - 70));
-    pincel.lineTo(170, (yBoneco - 70));
-    pincel.lineTo(170, 360);
-    pincel.moveTo(103, 360);
-    pincel.lineTo(400, 360);
+    pincel.lineTo(100, (yBoneco - 70));
+    pincel.lineTo(100, 330);
+    pincel.moveTo(83, 330);
+    pincel.lineTo(320, 330);
     pincel.stroke();
 }
 
