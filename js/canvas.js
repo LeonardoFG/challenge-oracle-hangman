@@ -4,7 +4,7 @@ console.log('tela:', tela);
 var pincel = tela.getContext('2d');
 
 
-var xBoneco = 270; 
+var xBoneco = 250; 
 var yBoneco = 70;
 
 var tamanhoLetra = 30;
@@ -13,7 +13,6 @@ var xLetra = 200;
 var yLetra = 430;
 
 function desenhaTela() {
-    //retângulo verde
     pincel.fillStyle = 'white';
     pincel.fillRect(0, 0, 400, 600);
 }
@@ -55,8 +54,6 @@ function cabeca() {
     pincel.stroke();
 }
 
-//retForca();
-
 function corpo(){
     pincel.fillStyle = 'black';
     pincel.beginPath();
@@ -64,7 +61,6 @@ function corpo(){
     pincel.lineTo((xBoneco +0.22), (yBoneco + 166));
     pincel.stroke();
 }
-
 
 function bracoEsquerdo(){
     pincel.fillStyle = 'black';
@@ -74,7 +70,6 @@ function bracoEsquerdo(){
     pincel.stroke();
 }
 
-
 function bracoDireito(){
     pincel.fillStyle = 'black';
     pincel.beginPath();
@@ -82,7 +77,6 @@ function bracoDireito(){
     pincel.lineTo((xBoneco + 34.78), (yBoneco + 96.5));
     pincel.stroke();
 }
-
 
 function pernaEsquerda(){
     pincel.fillStyle = 'black';
@@ -92,7 +86,6 @@ function pernaEsquerda(){
     pincel.stroke();
 }
 
-
 function pernaDireita(){
     pincel.fillStyle = 'black';
     pincel.beginPath();
@@ -101,13 +94,6 @@ function pernaDireita(){
     pincel.stroke();
 }
 
-//cabeca();
-//corpo();
-//bracoDireito();
-//bracoEsquerdo();
-//pernaDireita();
-//pernaEsquerda();
-
 function forca() {
     pincel.fillStyle = 'black';
     pincel.beginPath();
@@ -115,12 +101,10 @@ function forca() {
     pincel.lineTo((xBoneco +0.22), (yBoneco - 70));
     pincel.lineTo(100, (yBoneco - 70));
     pincel.lineTo(100, 330);
-    pincel.moveTo(83, 330);
+    pincel.moveTo(40, 330);
     pincel.lineTo(320, 330);
     pincel.stroke();
 }
-
-//forca();
 
 function desenhaTracos(nTracos){
     pincel.fillStyle = 'black';
