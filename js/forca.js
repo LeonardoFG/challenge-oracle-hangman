@@ -125,18 +125,28 @@ function adicionaPalavra(event) {
 
     event.preventDefault(); //para não carregar a pagina de no após clicar e limpar os campos
     let novaPalavra = document.querySelector('#input-nova-palavra').value;
-    console.log('novapalavra:', novaPalavra);
+    let result = novaPalavra.toUpperCase(); //converte para maiusculo
+    console.log('novapalavra:', result);
 
-    let palavraValida = /^[a-zA-Z]+$/.test(novaPalavra);
-    //onsole.log(palavraValida);
+    let palavraValida = /^[A-Z]+$/.test(result);
+    //console.log(palavraValida);
     //let result = palavraValida ? teclaCheck : '';
+    let jaExiste = (palavras.indexOf(result));
+    console.log('valor ja existe: ', jaExiste);
 
-    if (novaPalavra.length <= 8 && palavraValida == true) {
-        let result = novaPalavra.toUpperCase(); //converte para maiusculo
+    if (novaPalavra.length >= 3 && novaPalavra.length <= 8 && palavraValida == true && jaExiste == -1) {
         palavras.push(result);
         console.log(palavras);
-    } else {
-        alert('a palavra deve ter no máximo 8 caracteres e não pode conter caracteres especiais ou numeros');
-    }
+        console.log('palavra adicionada com sucesso !')
+    } else if (palavraValida == false ) {
+        alert(' A palavra não pode conter caracteres especiais ou numeros');
+    } else if (novaPalavra.length > 8) {
+        alert('A palavra deve conter até 8 caracteres');
+    } else if (novaPalavra.length <= 3) {
+        alert('A palavra deve conter pelo menos 3 caracteres');
+    } else if ( jaExiste >= 0){
+        alert('A palavra já existe na lista de palavras ');
+    } 
+
 }
 
