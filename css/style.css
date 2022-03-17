@@ -98,13 +98,16 @@
 
 .rodape {
   display: inline;
-  /*align-items: center;
-  text-align: center;
-  justify-content: center;*/
   width:16px;
   height:16px;
-  margin: 15px auto 0px;
-  padding: 0 20px;
+  margin: 15px auto 10px;
+  padding: 0 20px 0 20px;
+}
+
+footer {
+  display: inline;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 #logo-in {
