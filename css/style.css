@@ -96,12 +96,20 @@
   color: #0A3871;
 }
 
+.botoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
 .rodape {
   /*display: inline;
   width:16px;
   height:16px;
-  margin: 15px auto 10px;
-  padding: 0 20px 0 20px;*/
+  margin: 15px auto 10px;*/
+  padding: 10px 0 10px 0;
 }
 
 footer .rodape {
