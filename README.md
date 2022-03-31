@@ -17,6 +17,9 @@ Challenge Oracle ONE Semana 03 e 04: Crie seu próprio jogo da forca com Javascr
     K --> D
     J -->|não| L[coloca letra errada]
     L -->D
+```    
+```mermaid
+    flowchart TD    
     R([Adicionar nova palavra]) -->S[/inputPalavra/]
     S -->T(Checa palavra válida)
     T -->|válida| U(Adiciona a lista de Palavras)
