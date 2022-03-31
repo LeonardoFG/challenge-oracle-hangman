@@ -6,17 +6,19 @@ Challenge Oracle ONE Semana 03 e 04: Crie seu próprio jogo da forca com Javascr
     A([Começar a jogar]) --> B(iniciaJogo)
     B --> C(sorteiaPalavra)
     C --> D[/letra clicada/]
-    D -->|Certa| E[já foi acertada]
-    E -->|não| F[coloca letra na posição]
-    F -->G[Checa mais posições]
-    G --> D
-    E -->|sim| H(erro)
-    H --> D
-    D -->|Errada| J[já foi errada]
-    J -->|sim| K[erro]
+    D --> |Certa| E{já foi acertada}
+    E --> |não| F[coloca letra na posição]
+    F --> G[Checa mais posições]
+    E --> |sim| H(erro)
+    D --> |Errada| J{já foi errada}
+    J --> |não| L[coloca letra errada]
+    L --> M[retira uma vida]
+    M --> N[desenha parte forca]
+    J --> |sim| K[erro]
+    N --> D
     K --> D
-    J -->|não| L[coloca letra errada]
-    L -->D
+    G --> D
+    H --> D
 ```    
 ```mermaid
     flowchart TD    
