@@ -2,7 +2,7 @@
 Challenge Oracle ONE Semana 03 e 04: Crie seu próprio jogo da forca com Javascript
 
 <div class="mermaid">
-    flowchart TD
+    graph TD
     A([Começar a jogar]) --> B(iniciaJogo)
     B --> C(sorteiaPalavra)
     C --> D[/letra clicada/]
@@ -12,5 +12,4 @@ Challenge Oracle ONE Semana 03 e 04: Crie seu próprio jogo da forca com Javascr
     S -->T(Checa palavra válida)
     T -->|válida| U(Adiciona a lista de Palavras)
     T -->|inválida| V(mensagem de erro)
-</div
->
+</div>
